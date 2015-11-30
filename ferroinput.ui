@@ -1,0 +1,2763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ferroInput</class>
+ <widget class="QDialog" name="ferroInput">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>601</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="System">
+    <attribute name="title">
+     <string>System info</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>0</y>
+       <width>541</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="4">
+       <widget class="QLabel" name="label_76">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>nm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" colspan="2">
+       <widget class="QLineEdit" name="ns_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>15</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" alignment="Qt::AlignRight">
+       <widget class="QLabel" name="label_20">
+        <property name="toolTip">
+         <string>Integer, the starting timestep, usually 0, except starting from previous output</string>
+        </property>
+        <property name="text">
+         <string>start:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Real size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Time steps:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="12" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_14">
+        <property name="toolTip">
+         <string>Integer, unit of 1, position of the bottom boundary condition for displacement equals 0, usually set to 0</string>
+        </property>
+        <property name="text">
+         <string>ns1:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6" colspan="2" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_21">
+        <property name="toolTip">
+         <string>Integer, total number of timesteps</string>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>steps:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="8" colspan="2">
+       <widget class="QLineEdit" name="nf_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>40</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_81">
+        <property name="minimumSize">
+         <size>
+          <width>5</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>5</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" colspan="2">
+       <widget class="QLineEdit" name="nx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6" colspan="2" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_10">
+        <property name="toolTip">
+         <string>Integer, unit of 1, number of grid points in y</string>
+        </property>
+        <property name="text">
+         <string>ny:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="2">
+       <widget class="QLineEdit" name="lx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>100.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="10">
+       <widget class="QLabel" name="label_77">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>nm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_9">
+        <property name="toolTip">
+         <string>Integer, unit of 1, number of grid points in x</string>
+        </property>
+        <property name="text">
+         <string>nx:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8" colspan="2">
+       <widget class="QLineEdit" name="ksteps_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>10000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="13" colspan="2">
+       <widget class="QLineEdit" name="lz_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>100.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_17">
+        <property name="toolTip">
+         <string>float number, unit of nm</string>
+        </property>
+        <property name="text">
+         <string>lx :</string>
+        </property>
+        <property name="buddy">
+         <cstring>electric_Widget</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13" colspan="2">
+       <widget class="QLineEdit" name="nz_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>60</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="12" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_19">
+        <property name="toolTip">
+         <string>float number, unit of nm</string>
+        </property>
+        <property name="text">
+         <string>lz:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="12" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_11">
+        <property name="toolTip">
+         <string>Integer, unit of 1, number of grid points in z</string>
+        </property>
+        <property name="text">
+         <string>nz:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8" colspan="2">
+       <widget class="QLineEdit" name="ny_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="13" colspan="2">
+       <widget class="QLineEdit" name="ns1_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6" colspan="2" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_18">
+        <property name="toolTip">
+         <string>float number, unit of nm</string>
+        </property>
+        <property name="text">
+         <string>ly :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="13" colspan="2">
+       <widget class="QLineEdit" name="kprint_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>1000</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2" colspan="2">
+       <widget class="QLineEdit" name="kstart_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="12" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_22">
+        <property name="toolTip">
+         <string>Integer, output relavent *.dat file every $print timesteps</string>
+        </property>
+        <property name="text">
+         <string>print:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="8" colspan="2">
+       <widget class="QLineEdit" name="ly_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>100.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6" colspan="2" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_13">
+        <property name="toolTip">
+         <string>Integer, unit of 1, number of grid points for film thickness</string>
+        </property>
+        <property name="text">
+         <string>nf:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_12">
+        <property name="toolTip">
+         <string>Integer, unit of 1, number of grid points for substrate thickness</string>
+        </property>
+        <property name="text">
+         <string>ns:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Grid size: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="11">
+       <widget class="QLabel" name="label_82">
+        <property name="minimumSize">
+         <size>
+          <width>5</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>5</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="15">
+       <widget class="QLabel" name="label_78">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>nm</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>120</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Initial</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>582</width>
+       <height>172</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_23">
+        <property name="toolTip">
+         <string>Integer, choice of intial domain structure</string>
+        </property>
+        <property name="text">
+         <string>Preset domain #:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Flags:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLineEdit" name="domainNy_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_29">
+        <property name="toolTip">
+         <string>Integer, used as a seed for generating the random number in fortran.</string>
+        </property>
+        <property name="text">
+         <string>Random seed:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_27">
+        <property name="toolTip">
+         <string>Float, used for the initial polarization magnitude </string>
+        </property>
+        <property name="text">
+         <string>Domain magnitude:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_28">
+        <property name="toolTip">
+         <string>Float, used when noised is added to the initial polarization, for setting the magnitude of the noise polarization.</string>
+        </property>
+        <property name="text">
+         <string>Noise magnitude:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_31">
+        <property name="text">
+         <string>C/m^2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="domain_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_24">
+        <property name="toolTip">
+         <string>Integer, used in some preset domain case, where there are multiple domains, to set the width of the one domain</string>
+        </property>
+        <property name="text">
+         <string>Domain width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2" alignment="Qt::AlignRight">
+       <widget class="QCheckBox" name="restart_CB">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>Restart from output</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2" alignment="Qt::AlignRight">
+       <widget class="QCheckBox" name="noise_CB">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1000000</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>Add noise</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_30">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Presets:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="noiseMag_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_25">
+        <property name="toolTip">
+         <string>Integer, the grid point in x direction. Used in some preset cases, where there are multiple domains, for setting the position of the one domain.</string>
+        </property>
+        <property name="text">
+         <string>Preset domain nx:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLineEdit" name="randSeed_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>14</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="domainMag_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="domainNx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_36">
+        <property name="toolTip">
+         <string>Integer, choice of the nuclei configuration, 0 for no nuclei added</string>
+        </property>
+        <property name="text">
+         <string>Add nuclei:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5" alignment="Qt::AlignLeft">
+       <widget class="QLabel" name="label_26">
+        <property name="toolTip">
+         <string>Integer, the grid point in y direction. Used in some preset cases, where there are multiple domains, for setting the position of the one domain.</string>
+        </property>
+        <property name="text">
+         <string>Preset domain ny:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_32">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Noize:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_80">
+        <property name="text">
+         <string>C/m^2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLineEdit" name="domainWidth_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>20</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLineEdit" name="nuclei_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="label_91">
+        <property name="minimumSize">
+         <size>
+          <width>35</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>grids</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Landau</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>561</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Evolution:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLineEdit" name="temperature_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>298.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLabel" name="label_74">
+        <property name="toolTip">
+         <string>Float, unit of 1, from 0 to 1,  the content of the Ti in PZT</string>
+        </property>
+        <property name="text">
+         <string>xf:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_6">
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string>Material:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_79">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>K</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_33">
+        <property name="toolTip">
+         <string>Float, unit of 1, not real time unit. Control the time step size, namely how fast the simulation evolves. Too large value will cause numerical problems.</string>
+        </property>
+        <property name="text">
+         <string>dt:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_7">
+        <property name="toolTip">
+         <string>FLoat, unit of kelvin, temperature of the simulation</string>
+        </property>
+        <property name="text">
+         <string>Temperature:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_35">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>System:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QLineEdit" name="xf_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_34">
+        <property name="text">
+         <string>L0:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="dt_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.01</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" colspan="4">
+       <widget class="QLineEdit" name="l0_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_62">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QComboBox" name="material_combo">
+        <item>
+         <property name="text">
+          <string>Custom</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BFO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PZT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BTO</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Gradient</string>
+    </attribute>
+    <widget class="QCheckBox" name="gradient_CB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>Gradient parameters</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gradient_widget" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>541</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="8">
+       <widget class="QLabel" name="label_75">
+        <property name="text">
+         <string>g44m:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2">
+       <widget class="QLabel" name="label_39">
+        <property name="text">
+         <string>g12:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_37">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Coefficients:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="g11_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_40">
+        <property name="text">
+         <string>g44:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_38">
+        <property name="text">
+         <string>g11:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLineEdit" name="g12_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLineEdit" name="g44_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLineEdit" name="g44m_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.3</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Elastic</string>
+    </attribute>
+    <widget class="QCheckBox" name="elastic_CB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>Elastic parameters</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="elastic_widget" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>591</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="elastic">
+      <item row="3" column="7">
+       <widget class="QLineEdit" name="indenterStart_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, unit of </string>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLineEdit" name="indenterRadius_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="indenterSF_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, no unit, for setting the shape of the indenter</string>
+        </property>
+        <property name="placeholderText">
+         <string>1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="label_50">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Shape factor:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="7">
+       <widget class="QLineEdit" name="indenterEnd_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="indenterType_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="7">
+       <widget class="QLineEdit" name="indenterNy_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Integer, unit of 1, position of indenter in y direction</string>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLabel" name="label_55">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, in the unit of Pa, the end of the apply load.</string>
+        </property>
+        <property name="text">
+         <string>Load end:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5" colspan="2">
+       <widget class="QLabel" name="label_49">
+        <property name="toolTip">
+         <string>Float, unit of 1, in number of grid points, for setting the size of the indenter radius</string>
+        </property>
+        <property name="text">
+         <string>radius:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QLabel" name="label_88">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Pa</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5" colspan="2">
+       <widget class="QLabel" name="label_53">
+        <property name="minimumSize">
+         <size>
+          <width>70</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, in the unit of Pa, the initial stress applied from the indenter.</string>
+        </property>
+        <property name="text">
+         <string>Load initial:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_44">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, unit of 1, representing the msimatch strain exx between substrate and film.</string>
+        </property>
+        <property name="text">
+         <string>exx:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5" colspan="2">
+       <widget class="QLabel" name="label_45">
+        <property name="toolTip">
+         <string>Float, unit of 1, representing the msimatch strain eyy between substrate and film.</string>
+        </property>
+        <property name="text">
+         <string>eyy:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_43">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Mismatch:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5" colspan="2">
+       <widget class="QLabel" name="label_52">
+        <property name="text">
+         <string>Position y:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_47">
+        <property name="text">
+         <string>Indenter:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="indenterNx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Integer, unit of 1, position of indenter in x direction</string>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLineEdit" name="eyy_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.01</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="label_54">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, in the unit of Pa, the change of applied stress every $print number of time steps.</string>
+        </property>
+        <property name="text">
+         <string>Load delta:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QLabel" name="label_86">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Pa</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_87">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Pa</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="exx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.01</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_51">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Position x:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_48">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Integer, choice of the indenter shape, 0 for no indenter</string>
+        </property>
+        <property name="text">
+         <string>Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLineEdit" name="indenterDelta_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="10">
+       <widget class="QLabel" name="label_90">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="label_89">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="10">
+       <widget class="QLineEdit" name="exy_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLabel" name="label_46">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, unit of 1, representing the msimatch strain exy between substrate and film.</string>
+        </property>
+        <property name="text">
+         <string>exy:          </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Electric</string>
+    </attribute>
+    <widget class="QCheckBox" name="electric_CB">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>Electric parameters</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="electric_Widget" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>601</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="5" colspan="2">
+       <widget class="QComboBox" name="elecBC_Combo">
+        <item>
+         <property name="text">
+          <string>Open circuit</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Short circuit</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mix condition</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="2">
+       <widget class="QLabel" name="label_61">
+        <property name="toolTip">
+         <string>Parameter for a Lorentz like function</string>
+        </property>
+        <property name="text">
+         <string>Gamma:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QLabel" name="label_83">
+        <property name="text">
+         <string>V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QLabel" name="label_65">
+        <property name="toolTip">
+         <string>Float, the radius of the electrode moving radius. Used for cases that the electrode is moving.</string>
+        </property>
+        <property name="text">
+         <string>Path radius:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLabel" name="label_59">
+        <property name="toolTip">
+         <string>Integer, unit of 1, in number of grid points. Used for setting the position of the electrode in x direction.</string>
+        </property>
+        <property name="text">
+         <string>Position x:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_41">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Electrode:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="9">
+       <widget class="QLineEdit" name="electrodeRadius_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Float, unit of 1, in number of grid points. Used for setting the size of the electrode.</string>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="8">
+       <widget class="QLabel" name="label_68">
+        <property name="toolTip">
+         <string>Float, unit of V, the end voltage applied.</string>
+        </property>
+        <property name="text">
+         <string>Phi end:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="eka1_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLineEdit" name="voltageShape_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="8">
+       <widget class="QLabel" name="label_57">
+        <property name="toolTip">
+         <string>Float, unit of 1, 33 component of the 3x3 relative background permittivity </string>
+        </property>
+        <property name="text">
+         <string>eka3:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="label_56">
+        <property name="toolTip">
+         <string>Float, unit of 1, 22 component of the 3x3 relative background permittivity </string>
+        </property>
+        <property name="text">
+         <string>eka2:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="9">
+       <widget class="QLineEdit" name="electrodeNy_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Genreal:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="3">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Boundary condition:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QLabel" name="label_60">
+        <property name="toolTip">
+         <string>Integer, unit of 1, in number of grid points. Used for setting the position of the electrode in y direction.</string>
+        </property>
+        <property name="text">
+         <string>Position y:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QLabel" name="label_64">
+        <property name="toolTip">
+         <string>Integer, choice of electrode shape. Used for setting the shape of the electrode</string>
+        </property>
+        <property name="text">
+         <string>Electrode 
+ shape:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLineEdit" name="electrodeShape_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="9">
+       <widget class="QLineEdit" name="phiEnd_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="5">
+       <widget class="QLabel" name="label_67">
+        <property name="toolTip">
+         <string>Float, unit of V, the change of voltage every $print timesteps.</string>
+        </property>
+        <property name="text">
+         <string>Phi delta:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QLabel" name="label_58">
+        <property name="text">
+         <string>Electrode 
+ radius:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="2">
+       <widget class="QLabel" name="label_66">
+        <property name="toolTip">
+         <string>Float, unit of V, the initial voltage applied.</string>
+        </property>
+        <property name="text">
+         <string>Phi start:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLineEdit" name="electrodeNx_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="7">
+       <widget class="QLabel" name="label_84">
+        <property name="text">
+         <string>V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLineEdit" name="eka2_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QLabel" name="label_63">
+        <property name="toolTip">
+         <string>Integer, choice of the voltage shape, used for setting the voltage as a function of timesteps.</string>
+        </property>
+        <property name="text">
+         <string>Voltage shape:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLineEdit" name="pathRadius_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLineEdit" name="phiStart_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLabel" name="label_42">
+        <property name="toolTip">
+         <string>Float, unit of 1, 11 component of the 3x3 relative background permittivity </string>
+        </property>
+        <property name="text">
+         <string>eka1:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="6">
+       <widget class="QLineEdit" name="phiDelta_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLineEdit" name="gamma_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="9">
+       <widget class="QLineEdit" name="eka3_LE">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>50</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="10">
+       <widget class="QLabel" name="label_85">
+        <property name="text">
+         <string>V</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>More</string>
+    </attribute>
+    <widget class="QStackedWidget" name="moreStack">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>471</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="flexo">
+      <widget class="QCheckBox" name="flexo_CB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>Flexoelectric</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="flexo_Widget" native="true">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>431</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_71">
+          <property name="text">
+           <string>f11:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label_70">
+          <property name="text">
+           <string>Derivative scheme:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="f12_LE">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="f11_LE">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="6">
+         <widget class="QLineEdit" name="f44_LE">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_69">
+          <property name="text">
+           <string>Coefficients:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="4">
+         <widget class="QComboBox" name="derivative_Combo">
+          <item>
+           <property name="text">
+            <string>Spectral</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Finite difference</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QLabel" name="label_73">
+          <property name="text">
+           <string>f44:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLabel" name="label_72">
+          <property name="text">
+           <string>f12:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="outputFlexo_CB">
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="text">
+           <string>Flexoelectric output</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QCheckBox" name="checkBox_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>86</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string>Diffusion</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QListWidget" name="moreList">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>121</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Flexoelectric</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Diffusion</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Output</string>
+    </attribute>
+    <widget class="QCheckBox" name="pStart_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>20</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Initial polarization</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="outputElastic_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>50</y>
+       <width>86</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Elastic</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="outputElectric_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>80</y>
+       <width>86</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Electric</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="outputLandau_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>110</y>
+       <width>86</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Landau</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="outputGradient_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>86</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Gradient</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="outputDriving_CB">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>170</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string>Driving force</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="Generate">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>270</y>
+     <width>121</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Generate input</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Cancel">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>270</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadFile">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>81</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load file</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>ny_LE</tabstop>
+  <tabstop>nz_LE</tabstop>
+  <tabstop>ns_LE</tabstop>
+  <tabstop>nf_LE</tabstop>
+  <tabstop>ns1_LE</tabstop>
+  <tabstop>lx_LE</tabstop>
+  <tabstop>ly_LE</tabstop>
+  <tabstop>lz_LE</tabstop>
+  <tabstop>kstart_LE</tabstop>
+  <tabstop>ksteps_LE</tabstop>
+  <tabstop>kprint_LE</tabstop>
+  <tabstop>restart_CB</tabstop>
+  <tabstop>domain_LE</tabstop>
+  <tabstop>domainWidth_LE</tabstop>
+  <tabstop>domainNx_LE</tabstop>
+  <tabstop>domainNy_LE</tabstop>
+  <tabstop>noiseMag_LE</tabstop>
+  <tabstop>randSeed_LE</tabstop>
+  <tabstop>temperature_LE</tabstop>
+  <tabstop>dt_LE</tabstop>
+  <tabstop>l0_LE</tabstop>
+  <tabstop>gradient_CB</tabstop>
+  <tabstop>g11_LE</tabstop>
+  <tabstop>g12_LE</tabstop>
+  <tabstop>g44_LE</tabstop>
+  <tabstop>elastic_CB</tabstop>
+  <tabstop>exx_LE</tabstop>
+  <tabstop>indenterType_LE</tabstop>
+  <tabstop>indenterNx_LE</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>nx_LE</tabstop>
+  <tabstop>electric_CB</tabstop>
+  <tabstop>elecBC_Combo</tabstop>
+  <tabstop>eka1_LE</tabstop>
+  <tabstop>eka2_LE</tabstop>
+  <tabstop>eka3_LE</tabstop>
+  <tabstop>voltageShape_LE</tabstop>
+  <tabstop>electrodeRadius_LE</tabstop>
+  <tabstop>pathRadius_LE</tabstop>
+  <tabstop>electrodeNx_LE</tabstop>
+  <tabstop>electrodeNy_LE</tabstop>
+  <tabstop>gamma_LE</tabstop>
+  <tabstop>phiStart_LE</tabstop>
+  <tabstop>phiDelta_LE</tabstop>
+  <tabstop>phiEnd_LE</tabstop>
+  <tabstop>pStart_CB</tabstop>
+  <tabstop>outputElastic_CB</tabstop>
+  <tabstop>outputElectric_CB</tabstop>
+  <tabstop>outputLandau_CB</tabstop>
+  <tabstop>outputGradient_CB</tabstop>
+  <tabstop>outputDriving_CB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>moreList</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>moreStack</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>368</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>ferroInput</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>436</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>effectivePropertyInput</class>
+ <widget class="QDialog" name="effectivePropertyInput">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>774</width>
+    <height>558</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>635</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>60</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>605</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>800</width>
+       <height>800</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>100</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="elideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>true</bool>
+     </property>
+     <property name="tabsClosable">
+      <bool>false</bool>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="System">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <attribute name="title">
+       <string>System info</string>
+      </attribute>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>1</y>
+         <width>600</width>
+         <height>180</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>180</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>180</height>
+        </size>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>599</width>
+          <height>175</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Grid size: </string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_9">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Integer, unit of 1, number of grid points in x</string>
+           </property>
+           <property name="text">
+            <string>nx:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLineEdit" name="nx_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>64</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="label_10">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Integer, unit of 1, number of grid points in y</string>
+           </property>
+           <property name="text">
+            <string>ny:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLineEdit" name="ny_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>64</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="9">
+          <widget class="QLabel" name="label_11">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Integer, unit of 1, number of grid points in z</string>
+           </property>
+           <property name="text">
+            <string>nz:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="10">
+          <widget class="QLineEdit" name="nz_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>32</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Real size:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_17">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>float number, unit of nm</string>
+           </property>
+           <property name="text">
+            <string>lx :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="lx_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>45</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_76">
+           <property name="minimumSize">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>20</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>nm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="label_81">
+           <property name="minimumSize">
+            <size>
+             <width>5</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>5</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QLabel" name="label_18">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>float number, unit of nm</string>
+           </property>
+           <property name="text">
+            <string>ly :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLineEdit" name="ly_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>45</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QLabel" name="label_77">
+           <property name="minimumSize">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>20</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>nm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLabel" name="label_82">
+           <property name="minimumSize">
+            <size>
+             <width>5</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>5</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="9">
+          <widget class="QLabel" name="label_19">
+           <property name="minimumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>18</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>float number, unit of nm</string>
+           </property>
+           <property name="text">
+            <string>lz:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="10">
+          <widget class="QLineEdit" name="lz_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>45</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="11">
+          <widget class="QLabel" name="label_78">
+           <property name="minimumSize">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>20</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>nm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>System:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="5">
+          <widget class="QComboBox" name="systemCombo">
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="currentIndex">
+            <number>7</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>Elastic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Dielectric</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Piezoelectric</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Magnetic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Piezomagnetic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Magnetoelectric</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Diffusivity</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Thermal conductivity</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Number of phases:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="2">
+          <widget class="QLineEdit" name="numberofPhase_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Structure input format:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="6">
+          <widget class="QComboBox" name="strucInputCombo">
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>Order parameter array</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>phase id array</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Calculation type:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1" colspan="6">
+          <widget class="QComboBox" name="choiceCalcTypecombo">
+           <item>
+            <property name="text">
+             <string>Effective property</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Response to external field</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Appliedfield" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>180</y>
+         <width>600</width>
+         <height>260</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>260</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>600</width>
+         <height>260</height>
+        </size>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>2</y>
+          <width>591</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Elastic boundary 
+conditions:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Applied electric 
+ field (V/m): </string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Average temperature 
+gradient (K/m):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="appliedS">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Applied strain (unitless): </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLineEdit" name="s33_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Applied magnetic
+ field (A/m):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Average composition 
+gradient (mol/m^4):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" colspan="2">
+          <widget class="QComboBox" name="elasticBCcombo">
+           <item>
+            <property name="text">
+             <string>Strain</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Stress</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="s23_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>0.01</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLineEdit" name="s13_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="s11_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>-0.005</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="s11">
+           <property name="text">
+            <string>strain11:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="s23">
+           <property name="text">
+            <string>strain23:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="s13">
+           <property name="text">
+            <string>strain13:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLineEdit" name="s12_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>0.01</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLineEdit" name="s22_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="s22">
+           <property name="text">
+            <string>strain22:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QLabel" name="s33">
+           <property name="text">
+            <string>strain33:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QLabel" name="s12">
+           <property name="text">
+            <string>strain12:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLineEdit" name="ez_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="4">
+          <widget class="QLineEdit" name="ey_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="ex_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>-2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="6">
+          <widget class="QLineEdit" name="hz_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="4">
+          <widget class="QLineEdit" name="hy_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="hx_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="6">
+          <widget class="QLineEdit" name="cz_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="4">
+          <widget class="QLineEdit" name="cy_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="cx_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>-2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="6">
+          <widget class="QLineEdit" name="tz_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="4">
+          <widget class="QLineEdit" name="ty_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="tx_LE">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>-2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>Ex:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>Ey:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>Ez:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>Hx:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>Hy:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>Hz:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>C,x:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3">
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>C,y:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="5">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>C,z:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string>T,x:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>T,y:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="5">
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>T,z:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <widget class="QPushButton" name="Cancel">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>0</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Close</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Generate">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>0</y>
+        <width>121</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generate input</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadFile">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>81</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Load file</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="readImage">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Read image</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>0</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>mupro.png</file>
+        <file>header-img.png</file>
+        <file>mupro-logo.png</file>
+        <file>mupro-logo-blue.png</file>
+        <file>mupro-logo-grey.png</file>
+        <file>piezo-logo.png</file>
+        <file>property-logo.png</file>
+    </qresource>
+</RCC>
