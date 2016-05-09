@@ -17,19 +17,22 @@ SOURCES += main.cpp\
     ferroinput.cpp \
     effectivepropertyinput.cpp \
     phasetab.cpp \
-    patternreco.cpp
+    patternreco.cpp \
+    magnetic.cpp
 
 HEADERS  += mupromain.h \
     ferroinput.h \
     effectivepropertyinput.h \
     phasetab.h \
-    patternreco.h
+    patternreco.h \
+    magnetic.h
 
 FORMS    += mupromain.ui \
     ferroinput.ui \
     effectivepropertyinput.ui \
     phasetab.ui \
-    patternreco.ui
+    patternreco.ui \
+    magnetic.ui
 
 RESOURCES += \
     mupro-resource.qrc

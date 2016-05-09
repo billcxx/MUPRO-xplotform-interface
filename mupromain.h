@@ -25,6 +25,8 @@ private slots:
 
     void on_button_effect_clicked();
 
+    void on_button_ferromagnetic_clicked();
+
 private:
     Ui::muproMain *ui;
     QLabel *statusLabel;

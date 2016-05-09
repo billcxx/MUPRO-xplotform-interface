@@ -1,6 +1,6 @@
 #include "ferroinput.h"
 #include "ui_ferroinput.h"
-#include "QDebug.h"
+#include <QDebug>
 #include <iostream>
 #include <fstream>
 

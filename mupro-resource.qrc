@@ -7,5 +7,21 @@
         <file>mupro-logo-grey.png</file>
         <file>piezo-logo.png</file>
         <file>property-logo.png</file>
+        <file>d33.png</file>
+        <file>dentrite.png</file>
+        <file>li-dentrite-sim.png</file>
+        <file>mechanical-property.png</file>
+        <file>precipitate.png</file>
+        <file>superlattic.png</file>
+        <file>Taa.png</file>
+        <file>ferromagnetic_ring.png</file>
+        <file>Ni-alloy.png</file>
+        <file>grain-growth.png</file>
+        <file>interface.png</file>
+        <file>magnetic-composite.png</file>
+        <file>dropdown.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>tryqml.qml</file>
     </qresource>
 </RCC>

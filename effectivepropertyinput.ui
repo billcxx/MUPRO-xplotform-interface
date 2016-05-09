@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Effective property</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -1423,6 +1423,9 @@ gradient (mol/m^4):</string>
       </property>
       <property name="text">
        <string>Calculate</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
