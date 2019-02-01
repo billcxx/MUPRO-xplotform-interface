@@ -1,0 +1,15 @@
+#PBS -l nodes=5
+#PBS -l walltime=0:10:00
+#PBS 
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+echo " "
+echo " "
+echo "Job started on `hostname` at `date`"
+module load openmpi/intel
+mpirun ./Magnetic.exe
+echo " "
+echo "Job Ended at `date`"
+echo " "
+

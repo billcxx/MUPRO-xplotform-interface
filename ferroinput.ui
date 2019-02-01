@@ -2671,6 +2671,19 @@
     <bool>false</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="readImage_PB">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>272</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Read image</string>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>ny_LE</tabstop>

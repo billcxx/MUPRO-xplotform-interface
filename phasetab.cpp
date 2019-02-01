@@ -1,5 +1,6 @@
 #include "phasetab.h"
 #include "ui_phasetab.h"
+#include "QListView"
 #include <QDebug>
 
 phaseTab::phaseTab(QWidget *parent) :

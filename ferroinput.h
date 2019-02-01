@@ -177,6 +177,8 @@ private slots:
 
     void on_material_combo_activated(int index);
 
+    void on_readImage_PB_released();
+
 private:
     Ui::ferroInput *ui;
     int nx,ny,nz;

@@ -68,7 +68,7 @@ private:
     double hTotApp1,hTotApp2,hTotApp3;
     double cTotApp1,cTotApp2,cTotApp3;
     double tTotApp1,tTotApp2,tTotApp3;
-    bool Cnstrnd;
+    bool Cnstrnd,flagDistribution;
     phaseTab tab[6];
 };
 

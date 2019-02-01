@@ -1,0 +1,47 @@
+ 125        125        10         !lx,ly,lz             simulation size (nm)
+ 50         50         2          !nx,ny,nz             # of simulation grids
+ 0          0                     !ns,nf                # of grid layers of substrate and film (if nf=0, the system is considered either a bulk or an island) (ns only for nf/=0 or ni3/=0)
+ 1                                !choiceIslandShape    island in-plane shape: 0-2d array in 'islandShape.in' 1-rectangular or 2-elliptical shape defined in the next line (only for nf=0 and ni3/=0)
+ 40         40         2          !ni1,ni2,ni3          # of grids number of grids in the magnetic island (only for nf=0; if nf=0 and ni3=0, the system is considered bulk; ni1 and ni2 only for ni3≠0 and choiceIslandShape=1,2)
+ 1                                !choiceGrainStruct    grain structure: 0-Euler angles phi, theta and psi (degree) array in 'eulerAng.in' 1-single crystal with specified Euler angles
+ 0.         0.         0.         !phiC,thetaC,psiC     Euler angles phi, theta and psi (degree) of the single crystal orientation (only for choiceGrainStruct=1)
+ 800.E3     2.211E5    0.1        !M0,gamma,alphaM      saturation magnetization (A/m), electron gyromagnetic ratio (m/(A.s)), & damping constant (unitless)
+ false                            !flagAnisotropy       whether to consider magnetocrystalline anisotropy
+ 1                                !choiceAnisotropy     type of magnetocrystalline anisotropy: 1-cubic 2-uniaxial (only for flagAnisotropy=true)
+ 0.         0.         0.         !kc1,kc2,kc3          magnetocrystalline anisotropy coefficient (J/m^3) (only for flagAnisotropy=true; kc3 only for choiceAnisotropy=1)
+ true                             !flagStrayField       whether to consider stray field
+ false                            !flagPeriodic         periodic (or finite-size) magnetostatic boundary? (only for flagStrayField=true)
+ 0.         0.         0.         !ND(1)~(3)            demagnetizing factor N11, N22, N33 (unitless) (only for flagStrayField=true and flagPeriodic=true)
+ 0.         0.         0.         !ND(4)~(6)            demagnetizing factor N23, N13, N12 (unitless) (only for flagStrayField=true and flagPeriodic=true)
+ 1                                !choiceHExt           external magnetic field: 0-array in 'hExt.in' with linear interpolations 1-DC & AC components defined in following lines
+ 0.         0.         0.         !hdc(1)~(3)           DC component of external magnetic field (A/m) (only for choiceHExt=1)
+ 0.         0.         0.         !hac(1)~(3)           peak amplitude of AC component of external magnetic field (A/m) (only for choiceHExt=1)
+ 0.                               !frequency            frequency of AC component of external magnetic field (Hz) (only for choiceHExt=1)
+ 1.3E-11                          !AExch                magnetic exchange constant (J/m)
+ false                            !flagElastic          whether to consider magnetoelastic effect
+ 0.         0.                    !lam100,lam111        saturation magnetostriction (unitless) (only for flagElastic=true)
+ 0.         0.         0.         !c11,c12,c44          elastic stiffness (Voigt) (Pa) (only for flagElastic=true)
+ 0.         0.         0.         !cs11,cs12,cs44       elastic stiffness of substrate (Voigt) (Pa) (only for flagElastic=true)
+ true                             !flagConstrained      strain (or stress) elastic boundary condition? (only for bulk, i.e. nf=0 and ni3=0, and flagElastic=true)
+ 0.         0.         0.         !exx,eyy,exy          in-plane substrate/applied strains/stress (1 or Pa) (only for flagElastic=true)
+ 0.         0.         0.         !ezz,exz,eyz          out-of-plane applied strains/stress (1 or Pa) (only for bulk, i.e. nf=0 and ni3=0, and flagElastic=true)
+ 0          0.                    !recursL,toler        recursion limit & tolerance of convergence for iterative elastic solver (only when the elastic stiffness of the system is inhomogeneous)
+ true                             !flagST               whether to consider spin torque
+ 3                                !choiceST             type of spin torque: 1-spin-orbit torque 2-Slonczewski spin-transfer torque 3-Zhang-Li spin-transfer torque (only for flagST=true)
+ 0.                               !angleSH              spin Hall angle (only for flagST=true and choiceST=1)
+ 0.                               !etaSP                spin polarization constant (only for flagST=true and choiceST=2)
+ 0.05                             !ksiSTT               degree of non-adiabaticity (only for flagST=true and choiceST=3)
+ 1.E12      0.         0.         !jElect(1)~(3)        spin-polarized electric current density (only for flagST=true) (jElect(1) and jElect(2) only for choiceST=3)
+ 0.         0.         0.         !mFixed(1)~(3)        magnetization in the fixed layer in a spin torque structure (unitless) (only for flagST=true)
+ false                            !flagDMI              whether to consider Dzyaloshinskii-Moriya interaction (DMI)
+ 0.                               !DDMI                 continuous effective DMI constant (J/m^2) (only for flagDMI=true)
+ false                            !flagThermalFluc      whether to consider thermal fluctuation
+ 0.                               !temperature          temperature (K) (only for flagThermalFluc=true)
+ 1                                !choiceLLGSolver      type of LLGSolver: 1-implicit Gauss-Seidel using Fourier spectral 2-explicit rk4
+ 1.E-13                           !dt                   time per evolution step (s)
+ 0          50000                 !kt0,ktMax            starting time step #; finishing time step #
+ 100        10000                 !ktOutTable,ktOutDist output step interval for data table; output step interval for spatial distribution
+ 0                                !choiceInitialM       initial m distribution: 0-'magnt.in' 1-random orientation 2-specified uniform orientation 3-specified vortex domain
+ 0.         0.         0.         !AxisInitialM(1)~(3)  axis of a uniform orientation, or a vortex domain, for the initial m distribution (only for choiceInitialM=2,3)
+ false      false                 !flagOutH,flagOutE    whether to output distribution of effective fields and energy densities
+ false                            !flagOutS             whether to output distribution of eigenstrain, strain, and stress (only for flagElastic=true)

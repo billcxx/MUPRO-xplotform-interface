@@ -29,17 +29,34 @@
    <string>muproMain</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(255, 255, 255)</string>
+   <string notr="true">QWidget{background-color:rgb(255, 255, 255)}
+
+QPushButton{
+	background-color:rgb(255,255,255);
+	border:none;
+	text-align:left;
+	padding-left:20px;
+	color:rgb(47,47,47);
+	font: 25 15pt &quot;Helvetica Neue&quot;;
+}
+
+QPushButton:hover{
+	background-color:rgb(215,232,255);
+	color:rgb(54,131,249);
+}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="mouseTracking">
     <bool>true</bool>
    </property>
    <widget class="QPushButton" name="button_ferroelectric">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>170</y>
+      <y>220</y>
       <width>245</width>
       <height>50</height>
      </rect>
@@ -47,7 +64,7 @@
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -63,25 +80,16 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Ferroelectric</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_metal">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -93,7 +101,7 @@ QPushButton:hover{
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -106,68 +114,13 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Precipitation</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_ferromagnetic">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>220</y>
-      <width>245</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
-      <weight>3</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
-    </property>
-    <property name="text">
-     <string>Ferromagnetic</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_effect">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -179,7 +132,7 @@ QPushButton:hover{
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -192,19 +145,38 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Ferromagnetic</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_effect">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>170</y>
+      <width>245</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica Neue</family>
+      <pointsize>15</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Effective property</string>
@@ -214,6 +186,9 @@ QPushButton:hover{
     </property>
    </widget>
    <widget class="QPushButton" name="button_metal_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -225,7 +200,7 @@ QPushButton:hover{
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -238,25 +213,16 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Grain growth</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_metal_3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -268,7 +234,7 @@ QPushButton:hover{
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -281,25 +247,16 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Defect transport</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_metal_4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -311,7 +268,7 @@ QPushButton:hover{
     <property name="font">
      <font>
       <family>Helvetica Neue</family>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
       <weight>3</weight>
       <italic>false</italic>
       <bold>false</bold>
@@ -324,19 +281,7 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{
-	background-color:rgb(255,255,255);
-	border:none;
-	text-align:left;
-	padding-left:20px;
-	color:rgb(47,47,47);
-	font: 25 20pt &quot;Helvetica Neue&quot;;
-}
-
-QPushButton:hover{
-	background-color:rgb(215,232,255);
-	color:rgb(54,131,249);
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Solidification</string>
@@ -351,6 +296,18 @@ QPushButton:hover{
       <height>121</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>650</width>
+      <height>121</height>
+     </size>
+    </property>
     <property name="mouseTracking">
      <bool>true</bool>
     </property>
@@ -358,13 +315,16 @@ QPushButton:hover{
      <string notr="true">background:rgb(255,255,255)</string>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true"/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
     </property>
     <property name="pixmap">
-     <pixmap resource="mupro-resource.qrc">:/img/mupro-logo-blue.png</pixmap>
+     <pixmap resource="mupro-resource.qrc">:/img/small-logo.png</pixmap>
     </property>
     <property name="scaledContents">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="contact_info_LB">
@@ -383,7 +343,7 @@ QPushButton:hover{
      <string notr="true">background-color:none;</string>
     </property>
     <property name="text">
-     <string>Please visit our &lt;a href=&quot;http://www.ems.psu.edu/~chen/package&quot;&gt;website&lt;/a&gt;, or send us email phasefield@gmail.com .</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -448,7 +408,7 @@ QPushButton:hover{
         <pixmap resource="mupro-resource.qrc">:/img/interface.png</pixmap>
        </property>
        <property name="scaledContents">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -460,12 +420,20 @@ QPushButton:hover{
          <height>170</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Helvetica Neue</family>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="mouseTracking">
         <bool>true</bool>
        </property>
        <property name="styleSheet">
         <string notr="true">padding-right:5px;
-font: 25 15pt &quot;Helvetica Neue&quot;;
 </string>
        </property>
        <property name="text">

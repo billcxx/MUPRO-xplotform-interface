@@ -12,16 +12,20 @@ const QString main_intro="    µ-pro, microstructure-property modeling package, 
                          "ranging from grain growth, precipitation in alloys to domain structure evolution in ferroelectric/ferromagnetic/ferroelastic system.";
 
 const QString effective_property_intro="A variaty of properties could be calculated using our mu-pro package, "
-                                       "also including several coupled properties, such as elastic, Piezoelectric, "
+                                       "also including several coupled properties, such as elastic, piezoelectric, "
                                        "magnetic, piezomagnetic, magnetoelectric, and even static state diffusion properties. "
                                        "And our package provides you with an easy and highly customizable way to visualize the "
-                                       "output data, with the aid of vtk wrapped by python.";
+                                       "output data, with the aid of vtk package.";
 const QString ferroelectric_intro=" Our package enables you to evolve the domain structure under a variety of "
                                   "conditions in both bulk and thin film. We can apply force and electric field to the material, and "
                                   "calculate both effective property and domain configuration under such stimulation. We can consider "
                                   "defects, such as dislocation, inclusion and charged defects within the material. We are also capable of "
                                   "simulating polycrystal and superlattice cases. ";
-const QString ferromagnetic_intro="ferromagnetic";
+const QString ferromagnetic_intro=" Our package enables you to evolve the domain structure under a variety of "
+                                  "conditions in both bulk and thin film. We can apply force and magnetic field to the material, and "
+                                  "calculate both effective property and domain configuration under such stimulation. We can consider "
+                                  "defects, such as dislocation, inclusion and charged defects within the material. We are also capable of "
+                                  "simulating polycrystal and superlattice cases. ";
 const QString precipitation_intro="precipitation";
 const QString solidification_intro="solidification";
 const QString grain_growth_intro="grain growth";
@@ -69,6 +73,8 @@ void muproMain::mouseMoveEvent(QMouseEvent *e){
 
     QPixmap effective_property_img1(":/img/d33.png");
     QPixmap effective_property_img2(":/img/mechanical-property.png");
+//    qDebug()<<"feature";
+//    qDebug()<<ui->featureImg1_LB->width();
     effective_property_img1= effective_property_img1.scaledToWidth(ui->featureImg1_LB->width());
     effective_property_img2= effective_property_img2.scaledToWidth(ui->featureImg2_LB->width());
 
@@ -92,9 +98,9 @@ void muproMain::mouseMoveEvent(QMouseEvent *e){
     solidification_img1= solidification_img1.scaledToWidth(ui->featureImg1_LB->width());
     solidification_img2= solidification_img2.scaledToWidth(ui->featureImg2_LB->width());
 
-    qDebug()<<e->x()<<e->y();
+//    qDebug()<<e->x()<<e->y();
     mousePosLabel->setText("("+QString::number(e->x())+","+QString::number(e->y())+")");
-    if(e->x()>=0 && e->x()<=260 ){
+    if(e->x()>=0 && e->x()<=245 ){
 
         int y=e->y();
         if(y>=0 && y<120){
@@ -102,17 +108,19 @@ void muproMain::mouseMoveEvent(QMouseEvent *e){
             ui->featureImg1_LB->setPixmap(main_img1);
             ui->featureImg2_LB->setPixmap(main_img2);
         }else if(y>=120 && y<170){
-            ui->brief_intro_LB->setText(effective_property_intro);
-            ui->featureImg1_LB->setPixmap(effective_property_img1);
-            ui->featureImg2_LB->setPixmap(effective_property_img2);
-        }else if(y>=170&&y<220){
-            ui->brief_intro_LB->setText(ferroelectric_intro);
-            ui->featureImg1_LB->setPixmap(ferroelectric_img1);
-            ui->featureImg2_LB->setPixmap(ferroelectric_img2);
-        }else if(y>=220&&y<270){
             ui->brief_intro_LB->setText(ferromagnetic_intro);
             ui->featureImg1_LB->setPixmap(ferromagnetic_img1);
             ui->featureImg2_LB->setPixmap(ferromagnetic_img2);
+
+        }else if(y>=170&&y<220){
+            ui->brief_intro_LB->setText(effective_property_intro);
+            ui->featureImg1_LB->setPixmap(effective_property_img1);
+            ui->featureImg2_LB->setPixmap(effective_property_img2);
+
+        }else if(y>=220&&y<270){
+            ui->brief_intro_LB->setText(ferroelectric_intro);
+            ui->featureImg1_LB->setPixmap(ferroelectric_img1);
+            ui->featureImg2_LB->setPixmap(ferroelectric_img2);
         }else if(y>=270&&y<320){
             ui->brief_intro_LB->setText(precipitation_intro);
             ui->featureImg1_LB->setPixmap(precipitate_img1);
@@ -144,3 +152,8 @@ void muproMain::on_button_ferromagnetic_clicked()
     magnetic *magneticbutton=new magnetic;
     magneticbutton->show();
 }
+
+//void muproMain::on_button_ferroelectric_clicked(){
+//    ferroInput *ferro=new ferroInput;
+//    ferro->show();
+//}

@@ -10,13 +10,42 @@
     <height>690</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>16777215</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{
 background: #F7F8Fa;
-background:#F1F1F1;}</string>
+background:#F1F1F1;}
+
+QPushButton {
+    border: none;
+    background-color: #BAB9BE;
+    min-width: 80px;
+	min-height:30px;
+}
+
+QPushButton:hover{
+	background-color:#006BAC;
+	color:white;
+}
+
+QPushButton:pressed {
+    background-color: #006BAC;
+}
+</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
@@ -24,7 +53,7 @@ background:#F1F1F1;}</string>
      <x>0</x>
      <y>0</y>
      <width>901</width>
-     <height>651</height>
+     <height>641</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -36,14 +65,16 @@ background:#F1F1F1;}</string>
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>15</pointsize>
+     <pointsize>13</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QTabWidget::tab-bar{
+	background:#F1F1F1;
+}
 
-
-background:#F1F1F1;
+QCheckBox{
+	font-size:13px;
 }
 
 QTabWidget::pane{
@@ -54,11 +85,11 @@ QTabWidget::pane{
 
 QTabBar::tab{
 background: #018FBF;
-	padding: 5px 10px;
+	padding: 5px 10x;
   color:#ffffff;
 font: Arial bold 15px;
 height:30px;
-width:133.34px;
+width:150px;
 }
 
 QTabBar::tab:selected, QTabBar::tab:hover {
@@ -98,7 +129,7 @@ QLineEdit{
 border:1px solid rgb(220,220,220);
 min-width:78px;
 min-height:38px;
-	font: 15pt &quot;Arial&quot;;
+	font: 13pt &quot;Arial&quot;;
 qproperty-alignment: AlignCenter;
 }
 
@@ -113,7 +144,7 @@ QLineEdit:focus{
 QLabel{
 background-color:rgb(220, 220, 220);
 qproperty-alignment: AlignCenter;
-font: 15pt &quot;Arial&quot;;
+font: 11pt &quot;Arial&quot;;
 
 }
 
@@ -124,7 +155,7 @@ QComboBox {
     border:1px solid rgb(220,220,220);
     min-width: 6em;
 	min-height:38px;
-	font: 15pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
 
 height:38px;
 
@@ -134,7 +165,7 @@ height:38px;
 QComboBox:!editable {
     min-width: 6em;
 	min-height:38px;
-	font: 15pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
@@ -148,7 +179,7 @@ QComboBox:!editable:on {
     min-width: 6em;
 	min-height:38px;
 border-radius:0px;
-	font: 15pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
 
 }
 
@@ -168,7 +199,7 @@ QComboBox::drop-down {
     border-left-style: solid; /* just a single line */
 	padding-right:4px;
 	min-height:38px;
-	font: 15pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
 }
 
 QComboBox::down-arrow {
@@ -188,7 +219,7 @@ border-radius:0px;
 color:white;
 min-height:38px;
 background-color:rgb(220,220,220);
-	font: 15pt &quot;Arial&quot;;
+	font: 11pt &quot;Arial&quot;;
 }
 
 QComboBox QAbstractItemView::item{
@@ -205,7 +236,7 @@ min-height:38px;
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="iconSize">
     <size>
@@ -284,7 +315,10 @@ height:40px;
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -376,7 +410,7 @@ border-top:1px solid gray;
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>6.4</string>
+       <string>10</string>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -403,7 +437,10 @@ border-top:1px solid gray;
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="toolTip">
@@ -453,7 +490,7 @@ border-top:1px solid gray;
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>6.4</string>
+       <string>125</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -480,7 +517,10 @@ border-top:1px solid gray;
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="toolTip">
@@ -536,7 +576,7 @@ border-top:1px solid gray;
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>6.4</string>
+       <string>125</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_3">
@@ -563,7 +603,10 @@ border-top:1px solid gray;
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="toolTip">
@@ -613,7 +656,7 @@ border-top:1px solid gray;
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>6</string>
+       <string>50</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -677,11 +720,14 @@ border-top:1px solid gray;
       <property name="toolTip">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of grid points in z direction of the simulation system, global (lab) cordinate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
+      <property name="text">
+       <string/>
+      </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>7</string>
+       <string>2</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="nx_LE">
@@ -718,7 +764,7 @@ border-top:1px solid gray;
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>9</string>
+       <string>50</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
@@ -879,7 +925,7 @@ border-top:1px solid gray;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of grid points in z direction of the substrate, global (lab) cordinate.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>2</string>
+       <string>0</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_7">
@@ -1027,7 +1073,7 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Island in-plane shape: &lt;/p&gt;&lt;p&gt;0 means 2d array in 'islandShape.in'.&lt;/p&gt;&lt;p&gt;1 means rectangular.&lt;/p&gt;&lt;p&gt;2 means elliptical shape defined in the next line (only for nf/=0 and ni3/=0).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <item>
        <property name="text">
@@ -1070,7 +1116,7 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of grids along length (x direction) of the magnetic island (only for choiceIslandShape=1,2 and nf=0)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>4</string>
+       <string>40</string>
       </property>
      </widget>
      <widget class="QLabel" name="ni1_LB">
@@ -1160,7 +1206,7 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of grids along width (y direction) of the magnetic island (only for choiceIslandShape=1,2 and nf=0)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>4</string>
+       <string>40</string>
       </property>
      </widget>
      <widget class="QLabel" name="ni3_LB">
@@ -1219,7 +1265,7 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of grids along depth (z direction) of the magnetic island (only for nf=0)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>0</string>
+       <string>2</string>
       </property>
      </widget>
     </widget>
@@ -1577,8 +1623,7 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1705,8 +1750,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1750,8 +1794,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1766,7 +1809,7 @@ height:40px;
        <rect>
         <x>340</x>
         <y>60</y>
-        <width>124</width>
+        <width>140</width>
         <height>40</height>
        </rect>
       </property>
@@ -2285,7 +2328,7 @@ height:40px;
        <x>70</x>
        <y>10</y>
        <width>761</width>
-       <height>121</height>
+       <height>151</height>
       </rect>
      </property>
      <property name="title">
@@ -2302,8 +2345,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -2321,8 +2363,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -2360,7 +2401,7 @@ height:40px;
        <string>Demagnetizing factor:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="nd1_LB">
+     <widget class="QLabel" name="nd11_LB">
       <property name="geometry">
        <rect>
         <x>300</x>
@@ -2373,10 +2414,10 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;1&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;11&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="nd1_LE">
+     <widget class="QLineEdit" name="nd11_LE">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -2404,7 +2445,7 @@ height:40px;
        <string>0</string>
       </property>
      </widget>
-     <widget class="QLabel" name="nd2_LB">
+     <widget class="QLabel" name="nd22_LB">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -2417,10 +2458,10 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;2&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;22&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="nd3_LB">
+     <widget class="QLabel" name="nd33_LB">
       <property name="geometry">
        <rect>
         <x>580</x>
@@ -2433,10 +2474,10 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;3&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;33&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="nd2_LE">
+     <widget class="QLineEdit" name="nd22_LE">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -2464,7 +2505,7 @@ height:40px;
        <string>0</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="nd3_LE">
+     <widget class="QLineEdit" name="nd33_LE">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -2492,23 +2533,161 @@ height:40px;
        <string>0</string>
       </property>
      </widget>
+     <widget class="QLineEdit" name="nd12_LE">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>100</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nd13_LE">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>100</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nd12_LB">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>100</y>
+        <width>60</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;12&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nd13_LB">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>100</y>
+        <width>60</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;13&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nd23_LE">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>100</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nd23_LB">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>100</y>
+        <width>60</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Demagnetizing factor (unitless) (only for flagPeriodic=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; vertical-align:sub;&quot;&gt;23&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
      <zorder>demag_LB</zorder>
-     <zorder>nd1_LB</zorder>
-     <zorder>nd1_LE</zorder>
-     <zorder>nd2_LB</zorder>
-     <zorder>nd3_LB</zorder>
-     <zorder>nd2_LE</zorder>
-     <zorder>nd3_LE</zorder>
+     <zorder>nd11_LB</zorder>
+     <zorder>nd11_LE</zorder>
+     <zorder>nd22_LB</zorder>
+     <zorder>nd33_LB</zorder>
+     <zorder>nd22_LE</zorder>
+     <zorder>nd33_LE</zorder>
      <zorder>flagPeriodic_CB</zorder>
      <zorder>flagStrayField_CB</zorder>
+     <zorder>nd12_LE</zorder>
+     <zorder>nd13_LE</zorder>
+     <zorder>nd12_LB</zorder>
+     <zorder>nd13_LB</zorder>
+     <zorder>nd23_LE</zorder>
+     <zorder>nd23_LB</zorder>
     </widget>
     <widget class="QGroupBox" name="groupBox_14">
      <property name="geometry">
       <rect>
        <x>70</x>
-       <y>140</y>
+       <y>170</y>
        <width>761</width>
-       <height>271</height>
+       <height>281</height>
       </rect>
      </property>
      <property name="title">
@@ -2518,7 +2697,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>90</y>
+        <y>100</y>
         <width>250</width>
         <height>40</height>
        </rect>
@@ -2546,7 +2725,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>150</y>
+        <y>160</y>
         <width>250</width>
         <height>40</height>
        </rect>
@@ -2574,7 +2753,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>210</y>
+        <y>220</y>
         <width>250</width>
         <height>40</height>
        </rect>
@@ -2656,7 +2835,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>90</y>
+        <y>100</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2672,7 +2851,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>640</x>
-        <y>90</y>
+        <y>100</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2700,7 +2879,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>90</y>
+        <y>100</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2716,7 +2895,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>90</y>
+        <y>100</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2744,7 +2923,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>360</x>
-        <y>90</y>
+        <y>100</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2772,7 +2951,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>90</y>
+        <y>100</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2788,7 +2967,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>150</y>
+        <y>160</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2804,7 +2983,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>360</x>
-        <y>150</y>
+        <y>160</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2832,7 +3011,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>150</y>
+        <y>160</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2848,7 +3027,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>580</x>
-        <y>150</y>
+        <y>160</y>
         <width>60</width>
         <height>40</height>
        </rect>
@@ -2864,7 +3043,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>150</y>
+        <y>160</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2892,7 +3071,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>640</x>
-        <y>150</y>
+        <y>160</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -2920,7 +3099,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>210</y>
+        <y>220</y>
         <width>90</width>
         <height>40</height>
        </rect>
@@ -2948,7 +3127,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>210</y>
+        <y>220</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -3914,8 +4093,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -3936,8 +4114,8 @@ height:40px;
       <rect>
        <x>70</x>
        <y>10</y>
-       <width>751</width>
-       <height>341</height>
+       <width>761</width>
+       <height>401</height>
       </rect>
      </property>
      <property name="title">
@@ -3946,9 +4124,9 @@ height:40px;
      <widget class="QLabel" name="sigmaFixed1_LB">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>280</y>
-        <width>60</width>
+        <x>280</x>
+        <y>340</y>
+        <width>70</width>
         <height>40</height>
        </rect>
       </property>
@@ -3962,9 +4140,9 @@ height:40px;
      <widget class="QLabel" name="sigmaFixed2_LB">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>280</y>
-        <width>60</width>
+        <x>430</x>
+        <y>340</y>
+        <width>70</width>
         <height>40</height>
        </rect>
       </property>
@@ -3978,9 +4156,9 @@ height:40px;
      <widget class="QLabel" name="sigmaFixed3_LB">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>280</y>
-        <width>60</width>
+        <x>580</x>
+        <y>340</y>
+        <width>70</width>
         <height>40</height>
        </rect>
       </property>
@@ -3995,7 +4173,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>650</x>
-        <y>280</y>
+        <y>340</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4022,7 +4200,7 @@ height:40px;
      <widget class="QLabel" name="etaSP_LB1">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>30</x>
         <y>160</y>
         <width>250</width>
         <height>40</height>
@@ -4050,8 +4228,8 @@ height:40px;
      <widget class="QLabel" name="sigmaFixed_LB">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>280</y>
+        <x>30</x>
+        <y>340</y>
         <width>250</width>
         <height>40</height>
        </rect>
@@ -4078,7 +4256,7 @@ height:40px;
      <widget class="QLabel" name="choiceST_LB">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>30</x>
         <y>40</y>
         <width>250</width>
         <height>40</height>
@@ -4106,7 +4284,7 @@ height:40px;
      <widget class="QLineEdit" name="angleSH_LE">
       <property name="geometry">
        <rect>
-        <x>380</x>
+        <x>350</x>
         <y>100</y>
         <width>80</width>
         <height>40</height>
@@ -4128,13 +4306,13 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin Hall angle (only for flagST=true and choiceST=1)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>0.0924</string>
+       <string>0</string>
       </property>
      </widget>
      <widget class="QComboBox" name="choiceST_Combo">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>280</x>
         <y>40</y>
         <width>280</width>
         <height>40</height>
@@ -4143,6 +4321,14 @@ height:40px;
       <property name="toolTip">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Type of spin torque: (only for flagST=true)&lt;/p&gt;&lt;p&gt;1 means spin-orbit torque.&lt;/p&gt;&lt;p&gt;2 meansSlonczewski spin-transfer torque.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Spin-orbit torque</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>Slonczewski spin-transfer torque</string>
@@ -4150,14 +4336,14 @@ height:40px;
       </item>
       <item>
        <property name="text">
-        <string>Spin-orbit torque</string>
+        <string>Zhang-Li spin-transfer torque</string>
        </property>
       </item>
      </widget>
      <widget class="QLabel" name="angleSH_LB1">
       <property name="geometry">
        <rect>
-        <x>60</x>
+        <x>30</x>
         <y>100</y>
         <width>250</width>
         <height>40</height>
@@ -4182,11 +4368,11 @@ height:40px;
        <string>Spin hall angle:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="jElect_LE">
+     <widget class="QLineEdit" name="jElect1_LE">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>220</y>
+        <x>350</x>
+        <y>280</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4207,14 +4393,14 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>0.9e12</string>
+       <string>1.0e12</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="sigmaFixed2_LE">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>280</y>
+        <x>500</x>
+        <y>340</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4241,7 +4427,7 @@ height:40px;
      <widget class="QLineEdit" name="etaSP_LE">
       <property name="geometry">
        <rect>
-        <x>380</x>
+        <x>350</x>
         <y>160</y>
         <width>80</width>
         <height>40</height>
@@ -4263,14 +4449,14 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin polarization constant (only for flagST=true and choiceST=2)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="placeholderText">
-       <string>0.5</string>
+       <string>0</string>
       </property>
      </widget>
      <widget class="QLabel" name="jElect_LB1">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>220</y>
+        <x>30</x>
+        <y>280</y>
         <width>250</width>
         <height>40</height>
        </rect>
@@ -4297,8 +4483,8 @@ height:40px;
      <widget class="QLineEdit" name="sigmaFixed1_LE">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>280</y>
+        <x>350</x>
+        <y>340</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4333,8 +4519,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -4347,7 +4532,7 @@ height:40px;
      <widget class="QLabel" name="angleSH_LB">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>280</x>
         <y>100</y>
         <width>70</width>
         <height>40</height>
@@ -4363,7 +4548,7 @@ height:40px;
      <widget class="QLabel" name="etaSP_LB">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>280</x>
         <y>160</y>
         <width>70</width>
         <height>40</height>
@@ -4376,10 +4561,26 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;η&lt;span style=&quot; vertical-align:sub;&quot;&gt;SP&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="jElect_LB">
+     <widget class="QLabel" name="jElect1_LB">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>280</x>
+        <y>280</y>
+        <width>70</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>jElect1:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="KsiSTT_LB">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
         <y>220</y>
         <width>70</width>
         <height>40</height>
@@ -4389,7 +4590,154 @@ height:40px;
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="text">
-       <string>jElect:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ksi&lt;span style=&quot; vertical-align:sub;&quot;&gt;STT&lt;/span&gt;:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="KsiSTT_LE">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>220</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>0.05</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="KsiSTT_LB1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>250</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(155, 188, 201, 255), stop:1 rgba(118, 159, 177, 255))	;
+	padding:5px 10px;
+	color:white;
+border-left: 1px solid gray;
+border-top:1px solid gray;
+qproperty-alignment: AlignCenter;
+
+width:180px;
+height:40px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Degree of non-adiabaticity:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="jElect2_LB">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>70</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>jElect2:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="jElect2_LE">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>280</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="jElect3_LB">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>280</y>
+        <width>70</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>jElect3:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="jElect3_LE">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>280</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spin-polarized electric current (only for flagST=true)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
       </property>
      </widget>
     </widget>
@@ -4402,9 +4750,9 @@ height:40px;
      <property name="geometry">
       <rect>
        <x>70</x>
-       <y>430</y>
+       <y>460</y>
        <width>761</width>
-       <height>101</height>
+       <height>131</height>
       </rect>
      </property>
      <property name="title">
@@ -4427,8 +4775,7 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
@@ -4436,6 +4783,33 @@ height:40px;
       </property>
      </widget>
      <widget class="QCheckBox" name="outputH_CB">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>281</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Output distribution of effective field</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="outputE_CB">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -4452,12 +4826,11 @@ height:40px;
       </property>
       <property name="font">
        <font>
-        <family>Arial</family>
-        <pointsize>15</pointsize>
+        <pointsize>-1</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Output distribution of effective field</string>
+       <string>Output distribution of energy density</string>
       </property>
       <property name="checked">
        <bool>true</bool>
@@ -4468,9 +4841,9 @@ height:40px;
      <property name="geometry">
       <rect>
        <x>70</x>
-       <y>270</y>
+       <y>310</y>
        <width>761</width>
-       <height>151</height>
+       <height>141</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -4807,7 +5180,7 @@ height:40px;
        <x>70</x>
        <y>10</y>
        <width>761</width>
-       <height>251</height>
+       <height>291</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -4840,7 +5213,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>40</y>
+        <y>90</y>
         <width>190</width>
         <height>40</height>
        </rect>
@@ -4884,7 +5257,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>90</y>
+        <y>140</y>
         <width>190</width>
         <height>40</height>
        </rect>
@@ -4921,7 +5294,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>40</y>
+        <y>90</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4949,7 +5322,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>40</y>
+        <y>90</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -4977,7 +5350,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>90</y>
+        <y>140</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5008,7 +5381,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>90</y>
+        <y>140</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5036,7 +5409,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>90</y>
+        <y>140</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5067,7 +5440,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>530</x>
-        <y>90</y>
+        <y>140</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5095,7 +5468,7 @@ qproperty-alignment: AlignCenter;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>140</y>
+        <y>190</y>
         <width>190</width>
         <height>40</height>
        </rect>
@@ -5131,7 +5504,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>190</y>
+        <y>240</y>
         <width>190</width>
         <height>40</height>
        </rect>
@@ -5167,7 +5540,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>140</y>
+        <y>190</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5189,7 +5562,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>140</y>
+        <y>190</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5217,7 +5590,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>140</y>
+        <y>190</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5239,7 +5612,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>190</y>
+        <y>240</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5261,7 +5634,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>190</y>
+        <y>240</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5289,7 +5662,7 @@ height:40px;
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>190</y>
+        <y>240</y>
         <width>80</width>
         <height>40</height>
        </rect>
@@ -5306,6 +5679,88 @@ height:40px;
       <property name="text">
        <string>steps</string>
       </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>190</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(155, 188, 201, 255), stop:1 rgba(118, 159, 177, 255))	;
+	padding:5px 10px;
+width:200px;
+height:20px;
+	color:white;
+border-left: 1px solid gray;
+border-top:1px solid gray;
+qproperty-alignment: AlignCenter;
+width:180px;
+height:40px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Type of LLG solver:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="choiceLLGSolver_Combo">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>180</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>104</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Initial m distribution: &lt;/p&gt;&lt;p&gt;0 means 'magnt.in'.&lt;/p&gt;&lt;p&gt;1 means random orientation.&lt;/p&gt;&lt;p&gt;2 means specified uniform orientation.&lt;/p&gt;&lt;p&gt;3 means specified vortex domain.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Implicit Gauss-Seidel </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Explicit RK4</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>
@@ -5353,7 +5808,7 @@ QWidget{
     <rect>
      <x>170</x>
      <y>650</y>
-     <width>100</width>
+     <width>130</width>
      <height>40</height>
     </rect>
    </property>
@@ -5391,9 +5846,9 @@ QPushButton:pressed {
   <widget class="QPushButton" name="loadFile">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>49</x>
      <y>650</y>
-     <width>100</width>
+     <width>121</width>
      <height>40</height>
     </rect>
    </property>
@@ -5429,11 +5884,19 @@ color:#ffffff;
     <bool>false</bool>
    </property>
   </widget>
-  <zorder>layoutWidget</zorder>
-  <zorder>tabWidget</zorder>
-  <zorder>Cancel</zorder>
-  <zorder>Generate</zorder>
-  <zorder>loadFile</zorder>
+  <widget class="QPushButton" name="createBatch_PB">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>650</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create batch script</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>

@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QFileDialog>
+#include <QListView>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -21,18 +22,22 @@ effectivePropertyInput::effectivePropertyInput(QWidget *parent) :
     index=ui->choiceCalcTypecombo->currentIndex();
     if (index==1){
         ui->Appliedfield->show();
-        ui->tabWidget->setMinimumHeight(480);
-        ui->tabWidget->setMaximumHeight(480);
+        ui->tabWidget->setMinimumHeight(720);
+        ui->tabWidget->setMaximumHeight(720);
 //        ui->System->setMinimumHeight(400);
 //        ui->System->setMaximumHeight(400);
     }else if(index==0){
         ui->Appliedfield->hide();
-        ui->tabWidget->setMinimumHeight(205);
-        ui->tabWidget->setMaximumHeight(205);
+        ui->tabWidget->setMinimumHeight(350);
+        ui->tabWidget->setMaximumHeight(350);
 //        ui->System->setMinimumHeight(205);
 //        ui->System->setMaximumHeight(205);
     }
     this->adjustSize();
+    this->ui->choiceCalcTypecombo->setView(new QListView());
+    this->ui->systemCombo->setView(new QListView());
+    this->ui->strucInputCombo->setView(new QListView());
+    this->ui->elasticBCcombo->setView(new QListView());
 }
 
 effectivePropertyInput::~effectivePropertyInput()
@@ -155,8 +160,9 @@ void effectivePropertyInput::outputData(QString filedir){
         id++;
     }
 
-    out << choiceCalcType << " \n";
-    if (choiceCalcType==2){
+//    out << choiceCalcType << " \n";
+    out << boolalpha << flagDistribution << " \n";
+    if (flagDistribution){
         out << std::boolalpha << Cnstrnd << " \n";
         out << fixed;
         out << setw(11) << sTotApp11 << setw(11) << sTotApp22 << setw(11) << sTotApp33
@@ -287,9 +293,12 @@ void effectivePropertyInput::loadData(QString filedir){
         id++;
     }
 
-    in >> choiceCalcType;
+//    in >> choiceCalcType;
+    in >> boolalpha >> flagDistribution;
     in.ignore(100000,'\n');
-    if (choiceCalcType==2){
+    choiceCalcType=1;
+    if (flagDistribution){
+        choiceCalcType=2;
         in >> boolalpha >> Cnstrnd;
         in.ignore(100000,'\n');
         in >> fixed;
@@ -326,13 +335,13 @@ void effectivePropertyInput::loadData(QString filedir){
     ui->ty_LE->setText(QString::number(tTotApp2));
     ui->tz_LE->setText(QString::number(tTotApp3));
 
-    if (choiceCalcType==2){
+    if (flagDistribution){
         ui->Appliedfield->show();
         ui->tabWidget->setMinimumHeight(480);
         ui->tabWidget->setMaximumHeight(480);
 //        ui->System->setMinimumHeight(400);
 //        ui->System->setMaximumHeight(400);
-    }else if(choiceCalcType==1){
+    }else{
         ui->Appliedfield->hide();
         ui->tabWidget->setMinimumHeight(205);
         ui->tabWidget->setMaximumHeight(205);
@@ -431,12 +440,14 @@ void effectivePropertyInput::on_choiceCalcTypecombo_activated(int index)
 {
     if (index==1){
         ui->Appliedfield->show();
-        ui->tabWidget->setMinimumHeight(480);
-        ui->tabWidget->setMaximumHeight(480);
+        flagDistribution=true;
+        ui->tabWidget->setMinimumHeight(720);
+        ui->tabWidget->setMaximumHeight(720);
     }else if(index==0){
         ui->Appliedfield->hide();
-        ui->tabWidget->setMinimumHeight(205);
-        ui->tabWidget->setMaximumHeight(205);
+        flagDistribution=false;
+        ui->tabWidget->setMinimumHeight(350);
+        ui->tabWidget->setMaximumHeight(350);
     }
     this->adjustSize();
 }
@@ -479,14 +490,14 @@ void effectivePropertyInput::on_tabWidget_currentChanged(int index)
     int choice;
     choice=ui->choiceCalcTypecombo->currentIndex();
     if (index==0 && choice==0){
-        ui->tabWidget->setMinimumHeight(205);
-        ui->tabWidget->setMaximumHeight(205);
+       ui->tabWidget->setMinimumHeight(350);
+        ui->tabWidget->setMaximumHeight(350);
     }else if (index==0 &&choice==1){
-        ui->tabWidget->setMinimumHeight(480);
-        ui->tabWidget->setMaximumHeight(480);
+        ui->tabWidget->setMinimumHeight(720);
+        ui->tabWidget->setMaximumHeight(720);
     }else if (index!=0){
-        ui->tabWidget->setMinimumHeight(250);
-        ui->tabWidget->setMaximumHeight(250);
+        ui->tabWidget->setMinimumHeight(450);
+        ui->tabWidget->setMaximumHeight(450);
     }
     this->adjustSize();
 }

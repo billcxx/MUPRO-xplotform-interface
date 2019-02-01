@@ -1,5 +1,6 @@
 #include "ferroinput.h"
 #include "ui_ferroinput.h"
+#include "patternreco.h"
 #include <QDebug>
 #include <iostream>
 #include <fstream>
@@ -712,4 +713,10 @@ void ferroInput::on_material_combo_activated(int index)
 {
     choice_material=index+1;
     qDebug()<<"choice_material"<<choice_material;
+}
+
+void ferroInput::on_readImage_PB_released()
+{
+    patternReco *pattern=new patternReco;
+    pattern->show();
 }
