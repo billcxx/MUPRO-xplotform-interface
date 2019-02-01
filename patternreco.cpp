@@ -131,6 +131,8 @@ void patternReco::on_colorPicker_PB_released()
 void patternReco::colorTableRow(int row){
     QString item;
     int label;
+    if(ui->phase_table->rowCount()>0){
+        qDebug() << ui->phase_table->rowCount() ;
     item=this->ui->phase_table->item(row,0)->text();
     if(this->ui->scalarVectorSwitch_Combo==0){
         label=item.toInt();
@@ -139,6 +141,7 @@ void patternReco::colorTableRow(int row){
     }
     this->ui->phase_table->item(row,0)->setBackgroundColor(QColor(domainRGB[label][0],domainRGB[label][1],domainRGB[label][2]));
     this->ui->phase_table->item(row,0)->setTextColor(QColor(255,255,255));
+    }
 }
 
 void patternReco::on_addPhase_PB_released()
@@ -174,16 +177,22 @@ void patternReco::on_addPhase_PB_released()
 
 
         this->ui->phase_table->setItem(row,0,new QTableWidgetItem(item));
-        colorTableRow(row);
+
 
         item=this->ui->R_LE->text();
         this->ui->phase_table->setItem(row,1,new QTableWidgetItem(item));
+        qDebug() << " the color table3";
+
         item=this->ui->G_LE->text();
         this->ui->phase_table->setItem(row,2,new QTableWidgetItem(item));
         item=this->ui->B_LE->text();
         this->ui->phase_table->setItem(row,3,new QTableWidgetItem(item));
         item=this->ui->tolerance_LE->text();
         this->ui->phase_table->setItem(row,4,new QTableWidgetItem(item));
+
+        qDebug() << " the color table" << row << add;
+//        colorTableRow(row);
+        qDebug() << " the color tabl2e";
     }
 }
 
